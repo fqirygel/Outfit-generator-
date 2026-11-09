@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Outfit Generator</title>
+</head>
+<body>
+
+    <h1>Outfit Generator</h1>
+
+    <p id="outfit">Click the button to generate an outfit.</p>
+
+    <button onclick="generateOutfit()">
+        Generate Outfit
+    </button>
+
+    <script>
+        function generateOutfit() {
+
+            let tops = [
+                "T-Shirt",
+                "Blouse",
+                "Hoodie",
+                "Crop Top",
+                "Sweater"
+            ];
+
+            let bottoms = [
+                "Jeans",
+                "Skirt",
+                "Shorts",
+                "Trouser",
+                "Jogger Pants"
+            ];
+
+            let shoes = [
+                "Sneakers",
+                "Sandals",
+                "Boots",
+                "Heels",
+                "Flats"
+            ];
+
+            let accessories = [
+                "Necklace",
+                "Cap",
+                "Watch",
+                "Handbag",
+                "Sunglasses"
+            ];
+
+            let randomTop = tops[
+                Math.floor(Math.random() * tops.length)
+            ];
+
+            let randomBottom = bottoms[
+                Math.floor(Math.random() * bottoms.length)
+            ];
+
+            let randomShoes = shoes[
+                Math.floor(Math.random() * shoes.length)
+            ];
+
+            let randomAccessory = accessories[
+                Math.floor(Math.random() * accessories.length)
+            ];
+
+            document.getElementById("outfit").innerHTML =
+                "<h3>Your Outfit Today:</h3>" +
+                "Top: " + randomTop + "<br>" +
+                "Bottom: " + randomBottom + "<br>" +
+                "Shoes: " + randomShoes + "<br>" +
+                "Accessory: " + randomAccessory;
+        }
+    </script>
+
+</body>
+</html>
